@@ -6,7 +6,6 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 CenterCrop	correlators/correlator_nn/datasets.py	/^from torchvision.transforms import ToTensor, CenterCrop, Compose$/;"	i
 Compose	correlators/correlator_nn/datasets.py	/^from torchvision.transforms import ToTensor, CenterCrop, Compose$/;"	i
-Correlator	correlators/correlator_utils/utils.py	/^class Correlator:$/;"	c
 CorrelatorsShape	correlators/correlator_utils/all_pts_helper.py	/^CorrelatorsShape = namedtuple('CorrelatorsShape', 'batch_dim length n')$/;"	v
 Cumulants	correlators/correlator_nn/train.py	/^from correlator_utils.all_pts_helper import Cumulants, gen_combs$/;"	i
 Cumulants	correlators/correlator_utils/all_pts_helper.py	/^class Cumulants:$/;"	c
@@ -43,10 +42,8 @@ __init__	correlators/correlator_nn/reconstruction.py	/^    def __init__(self, us
 __init__	correlators/correlator_nn/train.py	/^    def __init__(self, acceptance_param_2pt=0.001, acceptance_param_3pt=0.001,$/;"	m	class:Model
 __init__	correlators/correlator_nn/train.py	/^    def __init__(self, total_mask_shape, reduction, batch_size):$/;"	m	class:Net
 __init__	correlators/correlator_utils/all_pts_helper.py	/^	def __init__(self, batch_size, image_dim=784, k=3, acceptance_parameter=1,$/;"	m	class:Cumulants
-__init__	correlators/correlator_utils/utils.py	/^    def __init__(self, data):$/;"	m	class:Correlator
 __len__	correlators/correlator_nn/datasets.py	/^    def __len__(self):$/;"	m	class:FashionMNISTFisherDataset	file:
 __len__	correlators/correlator_nn/datasets.py	/^    def __len__(self):$/;"	m	class:MNISTFisherDataset	file:
-b_w_image	correlators/correlator_utils/utils.py	/^def b_w_image(image):$/;"	f
 block	correlators/correlator_utils/block_helper_functions.py	/^def block(image, rows, cols):$/;"	f
 block	correlators/correlator_utils/helper_functions.py	/^def block(image, rows, cols):$/;"	f
 block_and_average	correlators/correlator_utils/block_helper_functions.py	/^def block_and_average(unblocked_image, block_rows, block_columns):$/;"	f
@@ -57,21 +54,16 @@ channels	correlators/correlator_utils/block_helper_functions.py	/^def channels(i
 check_set_gpu	correlators/correlator_nn/train.py	/^def check_set_gpu(number=None, verbose=True):$/;"	f
 combinations_with_replacement	correlators/correlator_utils/all_pts_helper.py	/^from itertools import combinations_with_replacement$/;"	i
 combinations_with_replacement	correlators/correlator_utils/helper_functions.py	/^from itertools import combinations_with_replacement$/;"	i
-correlator	correlators/correlator_utils/utils.py	/^    correlator = Correlator(data)$/;"	v	class:Correlator
 create_mask	correlators/correlator_utils/all_pts_helper.py	/^	def create_mask(self, mask_method, dataloader, batch_size, num_batch_to_consider):$/;"	m	class:Cumulants
 cumulant_gen	correlators/correlator_nn/reconstruction.py	/^import train as cumulant_gen$/;"	i
-data	correlators/correlator_utils/utils.py	/^    data = torch.normal(0, 1, size=(1024,1024), device=device)$/;"	v	class:Correlator
-device	correlators/correlator_utils/utils.py	/^    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')$/;"	v	class:Correlator
 einops	correlators/correlator_nn/reconstruction.py	/^import einops$/;"	i
 einops	correlators/correlator_nn/train.py	/^import einops$/;"	i
 einops	correlators/correlator_utils/all_pts_helper.py	/^import einops$/;"	i
 evaluate_correlator	correlators/correlator_utils/all_pts_helper.py	/^	def evaluate_correlator(self, correlator):$/;"	m	class:Cumulants
 execute_with_python_values_replicated	correlators/correlator_utils/all_pts_helper.py	/^from jaxlib.xla_client import execute_with_python_values_replicated$/;"	i
-expansion_coefficients	correlators/correlator_utils/utils.py	/^    def expansion_coefficients(self, partitions):$/;"	m	class:Correlator
 factorial	correlators/correlator_utils/all_pts_correlator.py	/^from math import factorial$/;"	i
 factorial	correlators/correlator_utils/all_pts_helper.py	/^from math import factorial$/;"	i
 factorial	correlators/correlator_utils/block_helper_functions.py	/^from math import factorial$/;"	i
-factorial	correlators/correlator_utils/utils.py	/^from math import factorial$/;"	i
 forward	correlators/correlator_nn/reconstruction.py	/^    def forward(self, x):$/;"	m	class:ReconstructorNet
 forward	correlators/correlator_nn/train.py	/^    def forward(self, x):$/;"	m	class:Net
 gc	correlators/correlator_utils/all_pts_helper.py	/^import gc$/;"	i
@@ -84,7 +76,6 @@ get_testing_data	correlators/correlator_nn/datasets.py	/^    def get_testing_dat
 get_testing_data	correlators/correlator_nn/datasets.py	/^    def get_testing_data(self, batch_size=64, batches=None):$/;"	m	class:MNISTDataset
 get_training_data	correlators/correlator_nn/datasets.py	/^    def get_training_data(self, batch_size=64, batches=0, batch_offset=0):$/;"	m	class:FashionMNISTDataset
 get_training_data	correlators/correlator_nn/datasets.py	/^    def get_training_data(self, batch_size=64, batches=0, batch_offset=0):$/;"	m	class:MNISTDataset
-helper_functions	correlators/correlator_utils/utils.py	/^import helper_functions$/;"	i
 jax	correlators/correlator_utils/all_pts_correlator.py	/^import jax.numpy as jnp$/;"	i
 jax	correlators/correlator_utils/all_pts_helper.py	/^import jax.numpy as jnp$/;"	i
 jax	correlators/correlator_utils/block_helper_functions.py	/^import jax.numpy as jnp$/;"	i
@@ -105,7 +96,6 @@ np	correlators/correlator_nn/train.py	/^import numpy as np$/;"	i
 np	correlators/correlator_utils/all_pts_helper.py	/^import numpy as np$/;"	i
 np	correlators/correlator_utils/block_helper_functions.py	/^import numpy as np$/;"	i
 np	correlators/correlator_utils/helper_functions.py	/^import numpy as np$/;"	i
-np	correlators/correlator_utils/utils.py	/^import numpy as np$/;"	i
 optim	correlators/correlator_nn/reconstruction.py	/^import torch.optim as optim$/;"	i
 optim	correlators/correlator_nn/train.py	/^from torch import nn, optim$/;"	i
 partition	correlators/correlator_utils/all_pts_correlator.py	/^def partition(collection):$/;"	f
@@ -115,7 +105,6 @@ partition	correlators/correlator_utils/block_helper_functions.py	/^from .helper_
 partition	correlators/correlator_utils/helper_functions.py	/^def partition(collection):$/;"	f
 perform_contractions	correlators/correlator_utils/all_pts_correlator.py	/^def perform_contractions(partitions):$/;"	f
 perform_contractions	correlators/correlator_utils/block_helper_functions.py	/^def perform_contractions(partitions):$/;"	f
-perform_contractions	correlators/correlator_utils/utils.py	/^    def perform_contractions(self, partitions):$/;"	m	class:Correlator
 plt	correlators/correlator_nn/reconstruction.py	/^import matplotlib.pyplot as plt$/;"	i
 plt	correlators/correlator_nn/train.py	/^import matplotlib.pyplot as plt$/;"	i
 random	correlators/correlator_utils/all_pts_correlator.py	/^from jax import random$/;"	i
@@ -127,7 +116,6 @@ torch	correlators/correlator_nn/reconstruction.py	/^import torch$/;"	i
 torch	correlators/correlator_nn/reconstruction.py	/^import torch.nn as nn$/;"	i
 torch	correlators/correlator_nn/reconstruction.py	/^import torch.optim as optim$/;"	i
 torch	correlators/correlator_nn/train.py	/^import torch$/;"	i
-torch	correlators/correlator_utils/utils.py	/^import torch$/;"	i
 tqdm	correlators/correlator_nn/train.py	/^from tqdm.auto import tqdm$/;"	i
 train	correlators/correlator_nn/train.py	/^    def train(self, train_dataloader, fashion_mnist=False,$/;"	m	class:Model
 train_test_approx	correlators/correlator_nn/reconstruction.py	/^    def train_test_approx(self, samples, trained_approximator,$/;"	m	class:ReconstructorModel
